@@ -1,0 +1,1 @@
+choco install "altap-salamander;caret;cpu-z.install;filezilla;jdownloader;kodi;Recuva;speccy;tinymediamanager;vlc;winscp.install;winsnap"

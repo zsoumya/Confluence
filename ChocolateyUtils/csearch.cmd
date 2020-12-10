@@ -1,0 +1,1 @@
+@choco search %1 --by-id-only --not-broken --approved-only --pre

@@ -1,0 +1,2 @@
+# WindowsTerminal 
+> Settings

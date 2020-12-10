@@ -1,0 +1,1 @@
+Copy the root folder to `$UserHome$/WindowsPowerShell|PowerShell/Modules` folder.

@@ -1,0 +1,92 @@
+{
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "root",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#95ffa4",
+          "background": "#A25AA7"
+        },
+        {
+          "type": "os",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#ea7258",
+          "background": "#0077c2"
+        },
+        {
+          "type": "shell",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#100e23",
+          "background": "#ea7258",
+          "properties": {
+            "prefix": " \ufcb5 "
+          }
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#100e23",
+          "background": "#91ddff",
+          "properties": {
+            "folder_icon": "\uf115",
+            "folder_separator_icon": "\ue0b1",
+            "style": "short"
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#193549",
+          "background": "#95ffa4"
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#100e23",
+          "background": "#906cff",
+          "properties": {
+            "prefix": " \ue235 "
+          }
+        },
+        {
+          "type": "exit",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#ffffff",
+          "background": "#ff8080",
+          "properties": {
+            "prefix": " \ue20f"
+          }
+        }
+      ]
+    },
+    {
+      "type": "newline"
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#6bf885",
+          "properties": {
+            "prefix": "",
+            "text": "<#A25AA7>\u276F</><#69FF94>\u276F</>"
+          }
+        }
+      ]
+    }
+  ],
+  "final_space": false
+}

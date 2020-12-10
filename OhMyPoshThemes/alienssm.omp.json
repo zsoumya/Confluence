@@ -1,0 +1,97 @@
+{
+  "final_space": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "diamond",
+          "foreground": "#ffffff",
+          "background": "#C678DD",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\uE0B0",
+          "properties": {
+            "postfix": " ",
+            "prefix": " "
+          }
+        },
+        {
+          "type": "root",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#000000",
+          "background": "#95FFA4"
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#ffffff",
+          "background": "#61afef",
+          "properties": {
+            "prefix": " \ue5ff ",
+            "style": "full"
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#193549",
+          "background": "#ECD80F"
+        }
+      ]
+    },
+	{
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "text",
+          "foreground": "#ffb300",
+          "properties": {
+            "text": "\ue0c2"
+          }
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#000000",
+          "background": "#ffb300",
+          "properties": {
+            "time_format": "15:04:05",
+            "postfix": " "
+          }
+        },
+        {
+          "type": "text",
+          "foreground": "#ffb300",
+          "properties": {
+            "text": "\ue0c0",
+            "prefix": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "newline"
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#ff479c",
+          "properties": {
+            "prefix": "",
+            "text": "\uf307"
+          }
+        }
+      ]
+    }
+  ]
+}

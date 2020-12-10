@@ -1,0 +1,1 @@
+@powershell -noprofile -nologo -file %~dp0cupall.ps1 -executionpolicy remotesigned

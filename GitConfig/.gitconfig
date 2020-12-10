@@ -1,0 +1,23 @@
+[core]
+	editor = notepad3.exe
+[user]
+	name = zsoumya
+	email = zsoumya@yahoo.com
+[color]
+	ui = true
+[diff]
+	tool = bc
+[difftool "bc"]
+	path = bcomp.exe
+[merge]
+	tool = bc
+[mergetool "bc"]
+	path = bcomp.exe
+[difftool]
+	prompt = false
+[mergetool]
+	keepBackup = false
+[includeIf "gitdir:E:/src/repos/mcd/"]
+    path = .gitconfig-mcd
+[init]
+	defaultBranch = main
