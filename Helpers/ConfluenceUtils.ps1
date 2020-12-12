@@ -22,6 +22,10 @@ function Get-CnfAppDataFolder {
     return Get-CnfSpecialFolder -specialFolder ApplicationData
 }
 
+function Get-CnfLocalAppDataFolder {
+    return Get-CnfSpecialFolder -specialFolder LocalApplicationData
+}
+
 function Get-CnfUserProfileFolder {
     return Get-CnfSpecialFolder -specialFolder UserProfile
 }
@@ -48,7 +52,7 @@ function Test-CnfPathAlreadyPresent {
     return $paths -contains $newPath
 }
 
-function Append-CnfPath {
+function Add-CnfPathFragment {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory=$true)]
@@ -72,7 +76,7 @@ function Append-CnfPath {
         if (-not (Test-Path -Path $eachPath)) {
             throw "Path does not exist: $eachPath"
         }
-        
+
         if (-not (Test-CnfPathAlreadyPresent -path $currentPath -newPath $eachPath)) {
             $currentPath = "$currentPath;$eachPath"
         }
@@ -99,13 +103,11 @@ function Copy-CnfFileSymLinks {
 
     Resolve-Path -Path "$sourcePath/$pattern" | ForEach-Object -Process {
         $fileName = Split-Path -Path $_ -Leaf
-        $backupFilename = "$fileName.bak"
         $destinationFile = Join-Path -Path $destinationPath -ChildPath $fileName
 
         if (Test-Path -Path $destinationFile) {
-            Write-Output -InputObject "$destinationFile exists. Backing up."
-            Remove-Item -Path (Join-Path -Path $destinationPath -ChildPath $backupFilename) -Force -ErrorAction Ignore
-            Rename-Item -Path $destinationFile -NewName $backupFilename -Force
+            Write-Output -InputObject "Target exists. Deleting: $destinationFile"
+            Remove-Item -Path $destinationFile -Force -ErrorAction Ignore
         }
 
         Write-Output -InputObject "Creating symlink: $destinationFile"
@@ -132,12 +134,17 @@ function Copy-CnfFolderSymLinks {
     $destinationName = Split-Path -Path $sourcePath -Leaf
     $destinationPath = Join-Path -Path $destinationParent -ChildPath $destinationName
 
+    if (Test-Path -Path $destinationPath) {
+        Write-Output -InputObject "Target exists. Deleting: $destinationPath"
+        Remove-Item -Path $destinationPath -Force -ErrorAction Ignore
+    }
+
     Write-Output -InputObject "Creating symlink: $(Join-Path -Path $destinationPath -ChildPath $destinationName)"
     New-Item -Type SymbolicLink -Path $destinationParent -Name $destinationName -Target $sourcePath -Force > $null
 
     if ($addToPath) {
         Write-Output -InputObject "Appending to PATH: $destinationPath"
-        Append-CnfPath -path $destinationPath -system
+        Add-CnfPathFragment -path $destinationPath -system
     }
 }
 
