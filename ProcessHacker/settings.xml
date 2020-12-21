@@ -66,7 +66,7 @@
   <setting name="MiniInfoWindowEnabled">1</setting>
   <setting name="MiniInfoWindowOpacity">0</setting>
   <setting name="MiniInfoWindowPinned">0</setting>
-  <setting name="MiniInfoWindowPosition">3111,1620</setting>
+  <setting name="MiniInfoWindowPosition">3085,1620</setting>
   <setting name="MiniInfoWindowRefreshAutomatically">1</setting>
   <setting name="MiniInfoWindowSize">@216|683,450</setting>
   <setting name="ModuleTreeListColumns"></setting>
@@ -78,9 +78,9 @@
   <setting name="ProcessServiceListViewColumns"></setting>
   <setting name="ProcessTreeListColumns">@216|0,0,450|1,1,113|2,2,101|3,3,158|4,4,158|5,5,315|6,6,405</setting>
   <setting name="ProcessTreeListSort">0,0</setting>
-  <setting name="ProcPropPage">General</setting>
+  <setting name="ProcPropPage">Threads</setting>
   <setting name="ProcPropPosition">200,200</setting>
-  <setting name="ProcPropSize">@96|460,580</setting>
+  <setting name="ProcPropSize">@216|1035,1305</setting>
   <setting name="ProgramInspectExecutables">peview.exe &quot;%s&quot;</setting>
   <setting name="PropagateCpuUsage">0</setting>
   <setting name="RunAsProgram"></setting>
@@ -90,7 +90,7 @@
   <setting name="ScrollToNewProcesses">0</setting>
   <setting name="SearchEngine">http://www.google.com/search?q=&quot;%s&quot;</setting>
   <setting name="ServiceListViewColumns"></setting>
-  <setting name="ServiceTreeListColumns"></setting>
+  <setting name="ServiceTreeListColumns">@216|0,0,315|1,1,495|2,2,225|3,3,158|4,4,293|5,5,113</setting>
   <setting name="ServiceTreeListSort">0,1</setting>
   <setting name="SessionShadowHotkey">106,2</setting>
   <setting name="ShowCommitInSummary">1</setting>
@@ -100,10 +100,10 @@
   <setting name="SysInfoWindowOneGraphPerCpu">0</setting>
   <setting name="SysInfoWindowPosition">200,200</setting>
   <setting name="SysInfoWindowSection"></setting>
-  <setting name="SysInfoWindowSize">@96|620,590</setting>
+  <setting name="SysInfoWindowSize">@216|1616,1328</setting>
   <setting name="SysInfoWindowState">1</setting>
   <setting name="ThinRows">0</setting>
-  <setting name="ThreadTreeListColumns"></setting>
+  <setting name="ThreadTreeListColumns">@216|0,,113|1,,101|2,,180|3,,405|4,,180|5,,225</setting>
   <setting name="ThreadTreeListSort">1,2</setting>
   <setting name="ThreadStackListViewColumns"></setting>
   <setting name="ThreadStackWindowSize">@96|420,380</setting>

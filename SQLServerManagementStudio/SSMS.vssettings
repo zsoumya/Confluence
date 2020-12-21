@@ -521,7 +521,7 @@
 		<Category name="Environment_FontsAndColors" Category="{1EDA5DD4-927A-43a7-810E-7FD247D0DA1D}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_FontsAndColors" PackageName="Visual Studio Environment Package">
 			<PropertyValue name="Version">2</PropertyValue>
 			<FontsAndColors Version="2.0">
-				<Theme Id="{CE94D289-8481-498B-8CA9-9B6191A315B9}"/>
+				<Theme Id="{1DED0138-47CE-435E-84EF-9EC1F439B749}"/>
 				<Categories>
 					<Category GUID="{6B113BF3-0F02-4A21-9AA0-D735A59076CE}" FontIsDefault="Yes">
 						<Items>
@@ -532,22 +532,22 @@
 					<Category GUID="{34F54DB8-3D69-4D94-ABD5-BA1D717AB8BE}" FontName="Tahoma" FontSize="8" CharSet="0" FontIsDefault="No">
 						<Items/>
 					</Category>
-					<Category GUID="{AD3737CA-26A1-47CB-A143-0EB0ECBC7FC9}" FontName="Cascadia Code PL" FontSize="9" CharSet="1" FontIsDefault="No">
+					<Category GUID="{AD3737CA-26A1-47CB-A143-0EB0ECBC7FC9}" FontName="Cascadia Code PL" FontSize="10" CharSet="1" FontIsDefault="No">
 						<Items/>
 					</Category>
-					<Category GUID="{E6784B78-8552-41D7-9630-D1FDEE0DD8E2}" FontName="Cascadia Code PL" FontSize="9" CharSet="1" FontIsDefault="No">
+					<Category GUID="{E6784B78-8552-41D7-9630-D1FDEE0DD8E2}" FontName="Cascadia Code PL" FontSize="10" CharSet="1" FontIsDefault="No">
 						<Items/>
 					</Category>
-					<Category GUID="{75A05685-00A8-4DED-BAE5-E7A50BFA929A}" FontName="Cascadia Code PL" FontSize="10" CharSet="1" FontIsDefault="No">
+					<Category GUID="{75A05685-00A8-4DED-BAE5-E7A50BFA929A}" FontName="Cascadia Code PL" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items/>
 					</Category>
-					<Category GUID="{FF349800-EA43-46C1-8C98-878E78F46501}" FontName="Cascadia Code PL" FontSize="10" CharSet="1" FontIsDefault="No">
+					<Category GUID="{FF349800-EA43-46C1-8C98-878E78F46501}" FontName="Cascadia Code PL" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items/>
 					</Category>
-					<Category GUID="{E0187991-B458-4F7E-8CA9-42C9A573B56C}" FontName="Cascadia Code PL" FontSize="10" CharSet="1" FontIsDefault="No">
+					<Category GUID="{E0187991-B458-4F7E-8CA9-42C9A573B56C}" FontName="Cascadia Code PL" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items/>
 					</Category>
-					<Category GUID="{58E96763-1D3B-4E05-B6BA-FF7115FD0B7B}" FontName="Cascadia Code PL" FontSize="10" CharSet="1" FontIsDefault="No">
+					<Category GUID="{58E96763-1D3B-4E05-B6BA-FF7115FD0B7B}" FontName="Cascadia Code PL" FontSize="11" CharSet="1" FontIsDefault="No">
 						<Items/>
 					</Category>
 				</Categories>
@@ -900,7 +900,7 @@
 												<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="0" IconResourceID="305" IconResourcePackage="687b26ef-c096-4f2d-9f8c-aaafada321ac" Name="ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}" IsSelected="True" IsVisible="True" DockedHeight="755.973880597015" DockedWidth="259" FloatingTop="377" FloatingLeft="463" FloatingHeight="600"/>
 											</DockGroup>
 											<DocumentGroupContainer IsVisible="True" DockedHeight="*" DockedWidth="*" FloatingTop="0" FloatingLeft="0">
-												<wm:WMDocumentGroup FloatingTop="0" FloatingLeft="0">
+												<wm:WMDocumentGroup IsVisible="True" FloatingTop="0" FloatingLeft="0">
 													<wm:ToolWindowView Name="ST:0:0:{29ce07d3-1898-47d3-88fa-15453b726b27}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
 													<wm:ToolWindowView Name="ST:0:0:{c79b74ff-f1d7-4c94-aefa-4d22bfe1b1f9}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
 													<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="DontForceCreate" Name="ST:0:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>

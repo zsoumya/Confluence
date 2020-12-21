@@ -1,4 +1,4 @@
-. .\Helpers\ConfluenceUtils.ps1
+﻿. .\Helpers\ConfluenceUtils.ps1
 
 # -- 7-Zip -- #
 function Install-Cnf7ZipSettings {
@@ -146,9 +146,8 @@ function Install-CnfPathCopyCopySettings {
 
 # -- PowerShell Profile -- #
 function Install-CnfPowerShellProfile {
-    [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [ValidateSet('Desktop', 'Core')]
         [string]
         $edition

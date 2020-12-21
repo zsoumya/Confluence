@@ -1,13 +1,12 @@
 function Get-CnfSpecialFolder {
-    [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
-        [Alias("f")]
-        [System.Environment+SpecialFolder]
+        [Parameter(Mandatory)]
+        [Alias('f')]
+        [Environment+SpecialFolder]
         $specialFolder
     )
 
-    return [System.Environment]::GetFolderPath($specialFolder)
+    return [Environment]::GetFolderPath($specialFolder)
 }
 
 function Get-CnfDesktopFolder {
@@ -35,32 +34,30 @@ function Get-CnfProgramFilesFolder {
 }
 
 function Test-CnfPathAlreadyPresent {
-    [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [String]
         $path,
 
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [String]
         $newPath
     )
 
-    $newPath = $newPath.TrimEnd("/\")
-    $paths = [String[]] ($path -split ";" | ForEach-Object -Process { $_.TrimEnd("/\") })
+    $newPath = $newPath.TrimEnd('/\')
+    $paths = [String[]] ($path -split ';' | ForEach-Object -Process { $_.TrimEnd('/\') })
 
     return $paths -contains $newPath
 }
 
 function Add-CnfPathFragment {
-    [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [String[]]
         $path,
 
         [switch]
-        [Alias("s")]
+        [Alias('s')]
         $system
     )
 
@@ -86,19 +83,17 @@ function Add-CnfPathFragment {
 }
 
 function Copy-CnfFileSymLinks {
-    [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [String]
         $sourcePath,
 
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [String]
         $destinationPath,
 
-        [Parameter()]
         [String]
-        $pattern = "*"
+        $pattern = '*'
     )
 
     Resolve-Path -Path "$sourcePath/$pattern" | ForEach-Object -Process {
@@ -116,17 +111,15 @@ function Copy-CnfFileSymLinks {
 }
 
 function Copy-CnfFolderSymLinks {
-    [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [String]
         $sourcePath,
 
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [String]
         $destinationParent,
 
-        [Parameter()]
         [switch]
         $addToPath
     )
@@ -149,40 +142,39 @@ function Copy-CnfFolderSymLinks {
 }
 
 function Import-CnfRegistry {
-    [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [String]
         $regFile
     )
 
     Write-Output -InputObject "Importing registry file: $regFile"
-    regedit /S $regFile
+    & "$env:windir\regedit.exe" /S $regFile
 }
 
 function Write-CnfFileFromTemplate {
-    [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [String]
         $templateFile,
 
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory)]
         [String]
         $outputFile,
 
-        [Parameter()]
         [hashtable]
-        $parameters
+        $parameters = $null
     )
 
     $content = Get-Content -Path $templateFile
-
-    $parameters.Keys | ForEach-Object -Process {
+    
+    if ($parameters) {
+      $parameters.Keys | ForEach-Object -Process {
         $key = $_
         $value = $parameters[$key]
 
         $content = $content -replace "{{$key}}", $value
+      }
     }
 
     Set-Content -Path $outputFile -Value $content -Force

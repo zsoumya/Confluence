@@ -29,11 +29,17 @@ function Install-FromWeb {
         }
 
         Write-Output -InputObject "Determining $name installer download link"
-        $response = Invoke-WebRequest -Uri $url -UseBasicParsing -ErrorAction Stop 
+        $response = Invoke-WebRequest -Uri $url -UseBasicParsing -ErrorAction Stop
+
+        $originalUrl = $url
 
         $url = ($response.Links | Where-Object -FilterScript { $_.href -and $_.href -match $pattern } | Select-Object -Index 0).href
         if (-not $url) {
 	        throw "$name installer download link not found!"
+        }
+
+        if ($url -inotmatch "^https?://") {
+            $url = (Get-RootUrl -url $originalUrl) + $url
         }
     }
 
@@ -72,7 +78,7 @@ function Install-FromWeb {
 function Get-ExtensionFromUrl {
     param (              
         [Parameter(Mandatory=$true)]
-        [System.Uri]
+        [uri]
         $url
     )
 
@@ -83,4 +89,14 @@ function Get-ExtensionFromUrl {
     else {
         return $null
     }
+}
+
+function Get-RootUrl {
+    param (              
+        [Parameter(Mandatory=$true)]
+        [uri]
+        $url
+    )
+
+    return "$($url.Scheme)://$($url.Host)"
 }
