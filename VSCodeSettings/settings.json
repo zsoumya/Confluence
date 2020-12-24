@@ -119,7 +119,7 @@
         "e:\\src\\repos\\fzmazure\\templates\\keyvault_template.json": "..\\environments\\stg\\parameters\\keyvault_parameters.json"
     },
     "[powershell]": {
-        "editor.defaultFormatter": "ms-vscode.powershell-preview"
+        "editor.defaultFormatter": "ms-vscode.powershell"
     },
     "files.hotExit": "off",
     "editor.fontWeight": "normal",

@@ -66,7 +66,7 @@
   <setting name="MiniInfoWindowEnabled">1</setting>
   <setting name="MiniInfoWindowOpacity">0</setting>
   <setting name="MiniInfoWindowPinned">0</setting>
-  <setting name="MiniInfoWindowPosition">3085,1620</setting>
+  <setting name="MiniInfoWindowPosition">3097,1620</setting>
   <setting name="MiniInfoWindowRefreshAutomatically">1</setting>
   <setting name="MiniInfoWindowSize">@216|683,450</setting>
   <setting name="ModuleTreeListColumns"></setting>
@@ -77,7 +77,7 @@
   <setting name="PluginsDirectory">plugins</setting>
   <setting name="ProcessServiceListViewColumns"></setting>
   <setting name="ProcessTreeListColumns">@216|0,0,450|1,1,113|2,2,101|3,3,158|4,4,158|5,5,315|6,6,405</setting>
-  <setting name="ProcessTreeListSort">0,0</setting>
+  <setting name="ProcessTreeListSort">2,2</setting>
   <setting name="ProcPropPage">Threads</setting>
   <setting name="ProcPropPosition">200,200</setting>
   <setting name="ProcPropSize">@216|1035,1305</setting>
