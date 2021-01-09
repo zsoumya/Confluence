@@ -33,7 +33,7 @@
     "defaults": {
       // Put settings here that you want to apply to all profiles.
       "fontFace": "CaskaydiaCove Nerd Font",
-      "fontSize": 11,
+      "fontSize": 10,
       "useAcrylic": true,
       "acrylicOpacity": 0.7,
       "colorScheme": "rebecca",

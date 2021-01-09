@@ -66,12 +66,12 @@
   <setting name="MiniInfoWindowEnabled">1</setting>
   <setting name="MiniInfoWindowOpacity">0</setting>
   <setting name="MiniInfoWindowPinned">0</setting>
-  <setting name="MiniInfoWindowPosition">3097,1620</setting>
+  <setting name="MiniInfoWindowPosition">3081,1620</setting>
   <setting name="MiniInfoWindowRefreshAutomatically">1</setting>
   <setting name="MiniInfoWindowSize">@216|683,450</setting>
   <setting name="ModuleTreeListColumns"></setting>
   <setting name="ModuleTreeListSort">0,0</setting>
-  <setting name="NetworkTreeListColumns"></setting>
+  <setting name="NetworkTreeListColumns">@216|0,0,225|1,1,270|2,2,113|3,3,270|4,4,113|5,5,101|6,6,158|7,7,180</setting>
   <setting name="NetworkTreeListSort">0,1</setting>
   <setting name="NoPurgeProcessRecords">0</setting>
   <setting name="PluginsDirectory">plugins</setting>
@@ -180,7 +180,7 @@
   <setting name="ProcessHacker.ToolStatus.ToolbarConfig"></setting>
   <setting name="ProcessHacker.ToolStatus.StatusbarConfig"></setting>
   <setting name="ProcessHacker.UpdateChecker.PromptStart">1</setting>
-  <setting name="ProcessHacker.UpdateChecker.LastUpdateCheckTime">132520353278180978</setting>
+  <setting name="ProcessHacker.UpdateChecker.LastUpdateCheckTime">132531333743644042</setting>
   <setting name="ProcessHacker.UserNotes.DatabasePath">%APPDATA%\Process Hacker 2\usernotesdb.xml</setting>
   <setting name="ProcessHacker.UserNotes.ColorCustomList"></setting>
   <setting name="ProcessHacker.WindowExplorer.ShowDesktopWindows">0</setting>

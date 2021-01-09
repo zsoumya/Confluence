@@ -178,18 +178,6 @@ function Install-CnfProcessHackerSettings {
     Copy-CnfFileSymLinks -sourcePath $sourcePath -destinationPath $destinationPath -pattern "*.xml"
 }
 
-# -- Scripts -- #
-function Install-CnfScripts {
-    $leafPath = "Scripts"
-    $sourcePath = Join-Path -Path $PSScriptRoot -ChildPath $leafPath
-    $destinationParent = "C:\tools"
-
-    Write-Output -InputObject "Installing Scripts"
-    Write-Output -InputObject "Source path: $sourcePath"
-    Write-Output -InputObject "Destination path: $(Join-Path -Path $destinationParent -ChildPath $leafPath)"
-    Copy-CnfFolderSymLinks -sourcePath $sourcePath -destinationParent $destinationParent -addToPath
-}
-
 # -- VS Code -- #
 function Install-CnfVSCodeSettings {
     $sourcePath = Join-Path -Path $PSScriptRoot -ChildPath "VSCodeSettings"
@@ -270,9 +258,6 @@ if ((Resolve-Path -Path $MyInvocation.InvocationName)[0].Path -ceq $PSCommandPat
     Write-Output -InputObject ""
 
     Install-CnfProcessHackerSettings
-    Write-Output -InputObject ""
-
-    Install-CnfScripts
     Write-Output -InputObject ""
 
     Install-CnfVSCodeSettings
